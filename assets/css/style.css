@@ -14,9 +14,11 @@ body {
     font-size: 62.5%;
 }
 body{
-    background-image: url(/assets/img/);
+    height: 100vh;
+    background-image: url(/assets/img/pag3.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .maxWidth{
     background-color: var(--primary-color);
@@ -63,4 +65,53 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
+}
+.img-avatar{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    margin-left: 2em;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;      /* centraliza verticalmente */
+    justify-content: center;  /* centraliza horizontalmente */
+    height: calc(100vh - 130px); /* altura total da tela - altura do header */
+}
+
+#sobre-mim {
+    width: 1000px;
+    height: 547px;
+    background-image: url(/assets/img/background-text.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 3rem;
+    gap: 2rem;                /* espaço entre imagem e texto */
+
+}
+
+.text-sobre{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 5em;
+}
+
+#sobre-mim h1 {
+    font-size: 5.4rem;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 0.4em;
+    margin-bottom: 0.7em;
+}
+#sobre-mim p {
+    font-size: 2rem;
+    color: white;
+    max-width: 500px;
+    line-height: 1.5;
+    
 }
