@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
-    --primary-color: #1a1818;
+    --primary-color: #1a18187a;
+    --secundary-color: #FFC900;
+    --font-primary: 'Press Start 2P', sans-serif;
     --default-gap: 1rem;
 }
 
@@ -15,11 +19,23 @@ body {
 }
 body{
     height: 100vh;
-    background-image: url(/assets/img/pag3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    font-family: var(--font-primary);
+    color: white;
 }
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/pagina1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5) blur(3px) saturate(120%); /* Aqui você ajusta o filtro desejado */
+    z-index: -1; /* Deixa atrás do conteúdo */
+}
+
 .maxWidth{
     background-color: var(--primary-color);
 }
@@ -47,9 +63,9 @@ body{
 }
 .top_header_nav a {
     display: inline-block;
-    width: 150px;
-    height: 33px;
-    line-height: 33px;
+    width: 184px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     text-decoration: none;
     background-image: url(/assets/img/background-link-nav.png);
@@ -83,17 +99,38 @@ body{
 }
 
 #sobre-mim {
+    position: relative;
+    display: flex;
     width: 1000px;
     height: 547px;
-    background-image: url(/assets/img/background-text.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
     padding: 3rem;
-    gap: 2rem;                /* espaço entre imagem e texto */
-
+    gap: 2rem;
+    overflow: hidden; /* garante que o overlay não ultrapasse */
 }
 
+#sobre-mim .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/background-text.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    z-index: 0;
+}
+
+#sobre-mim > *:not(.overlay) {
+    position: relative;
+    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+}
+
+#sobre-mim p {
+    font-size: 1.6rem;
+    max-width: 500px;
+    line-height: 1.5;
+}
 .text-sobre{
     display: flex;
     flex-direction: column;
@@ -101,17 +138,22 @@ body{
     margin-right: 5em;
 }
 
-#sobre-mim h1 {
-    font-size: 5.4rem;
-    color: white;
+.h1-sobre-mim {
+    font-size: 3.6rem;
     text-transform: uppercase;
-    margin-top: 0.4em;
+    margin-top: 0.5em;
     margin-bottom: 0.7em;
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 0.5rem; /* Espaçamento entre a imagem e o texto, opcional */
+    justify-content: center;
+    color: var(--secundary-color);
 }
-#sobre-mim p {
-    font-size: 2rem;
-    color: white;
-    max-width: 500px;
-    line-height: 1.5;
-    
+
+.img-seta-h1{
+    width: 70px;
+    animation: img-seta-h1 1s infinite;
+}
+@keyframes img-seta-h1 {
+    30% {opacity: 0%;}
 }
