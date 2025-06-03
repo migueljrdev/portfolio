@@ -48,7 +48,19 @@ body{
 
 .top_header_logo {
     width: 300px;
+    height: 51px;
     margin: auto;
+    background-image: url(/assets/img/background-logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top_header_logo h1{
+    color: black;
+    line-height: 51px;
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 0px white;
 }
 
 .top_header_nav ul {
@@ -81,6 +93,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
+    transform: translateY(-4px);
+    transition: 0.1s linear;
 }
 .img-avatar{
     width: 350px;
