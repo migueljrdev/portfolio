@@ -14,23 +14,40 @@
         </div>
         <nav class="top_header_nav">
             <ul>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a onclick="scrollToSection('sobre-mim')" href="#sobre-mim">Sobre mim</a></li>
+                <li><a onclick="scrollToSection('projetos')" href="#projetos">Projetos</a></li>
+                <li><a onclick="scrollToSection('contato')" href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="conteiner">
-        <div id="sobre-mim">
-            <div class="overlay"></div>
-            <img class="img-avatar" src="assets/img/Avatar.png" alt="perfil">
-            <div class="text-sobre">
-                <h1 class="h1-sobre-mim"><img class="img-seta-h1" src="assets/img/seta.ico" alt="seta">Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, odit. Debitis voluptate cupiditate unde? Quisquam, voluptates repudiandae placeat ratione repellendus minus ullam nihil dolore, tenetur, illum possimus alias quod. Est.</p>
+    <div class="section-container" id="scrollContainer">
+        <section class="conteiner">
+            <div id="sobre-mim">
+                <div class="overlay"></div>
+                <div class="avatar">
+                    <img class="img-avatar" src="assets/img/Avatar.png" alt="perfil">
+                    <h3>Passe o mouse</h3>
+                </div>
+                <div class="text-sobre">
+                    <h1 class="h1-sobre-mim"><img class="img-seta-h1" src="assets/img/seta.png" alt="seta">Sobre mim</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, odit. Debitis voluptate cupiditate unde? Quisquam, voluptates repudiandae placeat ratione repellendus minus ullam nihil dolore, tenetur, illum possimus alias quod. Est.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section class="conteiner">
+            <div id="projetos">
+                <div class="overlay"></div>
+            </div>
+        </section>
+
+        <section class="conteiner">
+            <div id="projetos">
+                <div class="overlay"></div>
+            </div>
+        </section>
+    </div>
 
     
     <script src="assets/js/script.js"></script>

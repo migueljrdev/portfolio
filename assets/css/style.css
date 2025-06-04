@@ -21,6 +21,17 @@ body{
     height: 100vh;
     font-family: var(--font-primary);
     color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.section-container{
+    display: flex;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .background-overlay {
@@ -40,10 +51,15 @@ body{
     background-color: var(--primary-color);
 }
 .top_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2.4em;
+    z-index: 10;
 }
 
 .top_header_logo {
@@ -101,7 +117,6 @@ body{
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    margin: auto;
     margin-left: 2em;
 }
 
@@ -110,9 +125,16 @@ body{
     align-items: center;      /* centraliza verticalmente */
     justify-content: center;  /* centraliza horizontalmente */
     height: calc(100vh - 130px); /* altura total da tela - altura do header */
+
+    min-width: 100vw;
+    height: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#sobre-mim {
+#sobre-mim, #projetos, #contato {
     position: relative;
     display: flex;
     width: 1000px;
@@ -144,6 +166,7 @@ body{
     font-size: 1.6rem;
     max-width: 500px;
     line-height: 1.5;
+    margin-top: 4em;
 }
 .text-sobre{
     display: flex;
@@ -156,18 +179,72 @@ body{
     font-size: 3.6rem;
     text-transform: uppercase;
     margin-top: 0.5em;
-    margin-bottom: 0.7em;
     display: flex;
     align-items: center; /* Alinha verticalmente ao centro */
-    gap: 0.5rem; /* Espaçamento entre a imagem e o texto, opcional */
+    gap: 1rem; /* Espaçamento entre a imagem e o texto, opcional */
     justify-content: center;
     color: var(--secundary-color);
 }
 
 .img-seta-h1{
-    width: 70px;
+    width: 50px;
+    height: 36px;
     animation: img-seta-h1 1s infinite;
 }
 @keyframes img-seta-h1 {
     30% {opacity: 0%;}
+}
+
+.avatar{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 1rem;
+}
+.avatar h3{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--secundary-color);
+    text-shadow: 1px 1px 1px var(--primary-color);
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+
+/*page projetos*/
+
+#projetos .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/background-text.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    z-index: 0;
+}
+
+#projetos > *:not(.overlay) {
+    position: relative;
+    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+}
+
+/*page contato*/
+#contato .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/background-text.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    z-index: 0;
+}
+
+#contato > *:not(.overlay) {
+    position: relative;
+    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
 }
