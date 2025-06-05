@@ -108,10 +108,23 @@ body{
     background-image: url(/assets/img/background-link-nav-hover.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ffffff;
+    color: var(--secundary-color);
+    text-shadow: 1px 2px 0px black;
     transform: translateY(-4px);
     transition: 0.1s linear;
 }
+.li-nav.active {
+    background-image: url(/assets/img/background-link-nav-hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secundary-color);
+    text-shadow: 1px 2px 0px black;
+    transform: translateY(-4px);
+    transition: 0.1s linear;
+    border-bottom: 2px solid var(--secundary-color);
+}
+
+
 .img-avatar{
     width: 350px;
     height: 350px;
@@ -134,7 +147,7 @@ body{
     align-items: center;
 }
 
-#sobre-mim, #projetos, #contato {
+#sobre-mim, #projetos, #contato, #skills {
     position: relative;
     display: flex;
     width: 1000px;
@@ -211,7 +224,6 @@ body{
 }
 
 /*page projetos*/
-
 #projetos .overlay {
     position: absolute;
     top: 0;
@@ -226,6 +238,25 @@ body{
 }
 
 #projetos > *:not(.overlay) {
+    position: relative;
+    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+}
+
+/*page skills*/
+#skills .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/background-text.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    z-index: 0;
+}
+
+#skills > *:not(.overlay) {
     position: relative;
     z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
 }
