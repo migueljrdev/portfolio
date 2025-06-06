@@ -1,3 +1,36 @@
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const startScreen = document.getElementById('start-screen');
+    const mainContent = document.getElementById('main-content');
+
+    if (startScreen) {
+      // Aplica transição de saída
+      startScreen.classList.add('fade-out');
+
+      // Espera a animação terminar para remover
+      setTimeout(() => {
+        startScreen.remove();
+
+        if (mainContent) {
+          mainContent.style.display = 'block';
+
+          // Scroll para sobre-mim com delay
+          setTimeout(() => {
+            const sobreMim = document.getElementById("sobre-mim");
+            if (sobreMim) {
+              sobreMim.scrollIntoView({ behavior: "smooth" });
+              setActiveLink("sobre-mim");
+            }
+          }, 100);
+        }
+
+      }, 300); // corresponde ao tempo da animação (1s)
+    }
+
+  }, 2200);
+});
+
+
 //evento para o hover do avatar
 const imgAvatar = document.querySelector('.img-avatar');
 //adiciona img ao passar o mouse
@@ -50,7 +83,6 @@ function setActiveLink(id) {
 }
 
 // Detecta rolagem e marca o link correto
-
 scrollContainer.addEventListener("scroll", () => {
     console.log("scroll ativado");
 
@@ -79,17 +111,20 @@ function updateBackgroundOverlay(sectionId) {
     const overlay = document.querySelector('.background-overlay');
 
     switch (sectionId) {
+        case 'home':
+            overlay.style.backgroundImage = "url('/assets/img/pagina3.png')";
+            break;
         case 'sobre-mim':
             overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
             break;
         case 'projetos':
-            overlay.style.backgroundImage = "url('/assets/img/pag2.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
             break;
         case 'skills':
-            overlay.style.backgroundImage = "url('/assets/img/pag2.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
             break;
         case 'contato':
-            overlay.style.backgroundImage = "url('/assets/img/pag3.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina3.png')";
             break;
         default:
             overlay.style.backgroundImage = "none";

@@ -12,20 +12,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html,
 body {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-body{
-    height: 100vh;
+body {
+    height: 100%;
+    width: 100%;
     font-family: var(--font-primary);
     color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    overflow: hidden;
+    position: relative; /* Ou remova completamente se não precisar */
+}
+#main-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     overflow: hidden;
 }
+
+#start-screen {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+#start-screen.fade-out {
+  opacity: 0;
+}
+
+
 .section-container{
     display: flex;
     height: 100%;
@@ -45,6 +62,7 @@ body{
     background-repeat: no-repeat;
     filter: brightness(0.5) blur(3px) saturate(120%); /* Aqui você ajusta o filtro desejado */
     z-index: -1; /* Deixa atrás do conteúdo */
+    transition: background-image 0.2s linear;
 }
 
 .maxWidth{
@@ -137,17 +155,12 @@ body{
     display: flex;
     align-items: center;      /* centraliza verticalmente */
     justify-content: center;  /* centraliza horizontalmente */
-    height: calc(100vh - 130px); /* altura total da tela - altura do header */
-
     min-width: 100vw;
     height: 100%;
     scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#sobre-mim, #projetos, #contato, #skills {
+#sobre-mim, #projetos, #contato, #skills, #home {
     position: relative;
     display: flex;
     width: 1000px;
@@ -197,6 +210,37 @@ body{
     gap: 1rem; /* Espaçamento entre a imagem e o texto, opcional */
     justify-content: center;
     color: var(--secundary-color);
+}
+
+.btn-sobreMim{
+    display: flex;
+    margin: auto;
+    gap: 2rem;
+    font-size: 2em;
+}
+
+.cv-linkedin-ico a{
+    display: inline-block;
+    text-decoration: none;
+    width: 184px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    background-image: url(/assets/img/background-cv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secundary-color);
+    text-shadow: 1px 1px 0px black;
+}
+.cv-linkedin-ico a:hover {
+    background-image: url(/assets/img/background-cv-hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-shadow: 1px 1px 0px var(--secundary-color);
+    transform: translateY(-4px);
+    transition: 0.1s linear;
 }
 
 .img-seta-h1{
@@ -278,4 +322,35 @@ body{
 #contato > *:not(.overlay) {
     position: relative;
     z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+}
+/*page home*/
+#home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+.tex-home{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+    gap: 3rem;
+    text-shadow: 1px 2px 0px black;
+}
+#home h1 {
+    font-size: 8rem;
+    animation: img-seta-h1 1s infinite;
+    color: var(--secundary-color);
+    text-transform: uppercase;
+}
+
+#home h2{
+    font-size: 4rem;
 }

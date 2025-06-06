@@ -8,53 +8,73 @@
 </head>
 <body>
     <div class="background-overlay"></div>
-    <header class="top_header maxWidth">
-        <div class="top_header_logo">
-            <h1>DEV Miguel Jr</h1>
+    <section class="conteiner" id="start-screen">
+        <div id="home">
+            <div class="overlay"></div>
+            <div class="tex-home">
+                <h2>Bem vindo ao meu portfólio!</h2>
+                <h1>Press Start</h1>
+            </div>
         </div>
-        <nav class="top_header_nav">
-            <ul>
-                <li><a class="li-nav" onclick="scrollToSection('sobre-mim')" href="#sobre-mim">Sobre mim</a></li>
-                <li><a class="li-nav" onclick="scrollToSection('projetos')" href="#projetos">Projetos</a></li>
-                <li><a class="li-nav" onclick="scrollToSection('skills')" href="#skills">skills</a></li>
-                <li><a class="li-nav" onclick="scrollToSection('contato')" href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    </section>
 
-    <div class="section-container" id="scrollContainer">
-        <section class="conteiner">
-            <div id="sobre-mim">
-                <div class="overlay"></div>
-                <div class="avatar">
-                    <img class="img-avatar" src="assets/img/Avatar.png" alt="perfil">
-                    <h3>Passe o mouse</h3>
+    <main id="main-content" style="display: none;">
+        <header class="top_header maxWidth">
+            <div class="top_header_logo">
+                <h1>&lt;Miguel Jr/&gt;</h1>
+            </div>
+            <nav class="top_header_nav">
+                <ul>
+                    <li><a class="li-nav" onclick="scrollToSection('sobre-mim')" href="#sobre-mim">Sobre mim</a></li>
+                    <li><a class="li-nav" onclick="scrollToSection('projetos')" href="#projetos">Projetos</a></li>
+                    <li><a class="li-nav" onclick="scrollToSection('skills')" href="#skills">skills</a></li>
+                    <li><a class="li-nav" onclick="scrollToSection('contato')" href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div class="section-container" id="scrollContainer">
+            <section class="conteiner">
+                <div id="sobre-mim">
+                    <div class="overlay"></div>
+                    <div class="avatar">
+                        <img class="img-avatar" src="assets/img/Avatar.png" alt="perfil">
+                        <h3>Passe o mouse</h3>
+                    </div>
+                    <div class="text-sobre">
+                        <h1 class="h1-sobre-mim"><img class="img-seta-h1" src="assets/img/seta.png" alt="seta">Sobre mim</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, odit. Debitis voluptate cupiditate unde? Quisquam, voluptates repudiandae placeat ratione repellendus minus ullam nihil dolore, tenetur, illum possimus alias quod. Est.</p>
+                        <div class="btn-sobreMim">
+                            <div class="cv-linkedin-ico">
+                                <a href="#" target="_blank" rel="noopener noreferrer" download>Baixar CV</a>
+                            </div>
+                            <div class="cv-linkedin-ico">
+                                <a href="#" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-sobre">
-                    <h1 class="h1-sobre-mim"><img class="img-seta-h1" src="assets/img/seta.png" alt="seta">Sobre mim</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, odit. Debitis voluptate cupiditate unde? Quisquam, voluptates repudiandae placeat ratione repellendus minus ullam nihil dolore, tenetur, illum possimus alias quod. Est.</p>
+            </section>
+            
+            <section class="conteiner">
+                <div id="projetos">
+                    <div class="overlay"></div>
                 </div>
-            </div>
-        </section>
-        
-        <section class="conteiner">
-            <div id="projetos">
-                <div class="overlay"></div>
-            </div>
-        </section>
-
-        <section class="conteiner">
-            <div id="skills">
-                <div class="overlay"></div>
-            </div>
-        </section>
-
-        <section class="conteiner">
-            <div id="contato">
-                <div class="overlay"></div>
-            </div>
-        </section>
-    </div>
+            </section>
+    
+            <section class="conteiner">
+                <div id="skills">
+                    <div class="overlay"></div>
+                </div>
+            </section>
+    
+            <section class="conteiner">
+                <div id="contato">
+                    <div class="overlay"></div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     
     <script src="assets/js/script.js"></script>
