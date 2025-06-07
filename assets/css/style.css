@@ -201,7 +201,7 @@ body {
     margin-right: 5em;
 }
 
-.h1-sobre-mim {
+.h1-sobre-mim, .h1-projetos {
     font-size: 3.6rem;
     text-transform: uppercase;
     margin-top: 0.5em;
@@ -230,8 +230,8 @@ body {
     background-image: url(/assets/img/background-cv.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: var(--secundary-color);
-    text-shadow: 1px 1px 0px black;
+    color: black;
+    font-weight: bold;
 }
 .cv-linkedin-ico a:hover {
     background-image: url(/assets/img/background-cv-hover.png);
@@ -239,7 +239,7 @@ body {
     background-size: cover;
     color: black;
     text-shadow: 1px 1px 0px var(--secundary-color);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     transition: 0.1s linear;
 }
 
@@ -285,6 +285,29 @@ body {
     position: relative;
     z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
 }
+.container-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(2, auto);   /* 2 linhas */
+    width: 100%;
+    z-index: 1;
+    margin-top: 3em;
+    gap: 2em;
+}
+.grid{
+    background-image: url(/assets/img/background-projetos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 375px;
+    height: 200px;
+    display: flex;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+.title-projetos{
+    margin: auto;
+}
+
 
 /*page skills*/
 #skills .overlay {
