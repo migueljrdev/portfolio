@@ -130,3 +130,45 @@ function updateBackgroundOverlay(sectionId) {
             overlay.style.backgroundImage = "none";
     }
 }
+
+const slider = document.getElementById('slider');
+let currentIndex = 0;
+const cardsPerView = 2; // Mostrando 2 cards por vez
+
+function slideLeft() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+    updateDots();
+  }
+}
+
+function slideRight() {
+  const totalItems = slider.children.length;
+  if (currentIndex < totalItems - cardsPerView) {
+    currentIndex++;
+    updateSlider();
+    updateDots();
+  }
+}
+
+function updateSlider() {
+  const cardWidth = 450 + 38; // largura do card + gap
+  slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+// Atualiza os dots com base no índice atual
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // O dot ativo é baseado no currentIndex
+  const activeDotIndex = Math.min(currentIndex, dots.length - 1);
+  if (dots[activeDotIndex]) {
+    dots[activeDotIndex].classList.add('active');
+  }
+}
+
+// Inicializa o dot ao carregar
+updateDots();
+
