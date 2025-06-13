@@ -303,11 +303,12 @@ body {
   gap: 6em;
   transition:  transform 0.5s ease;
 }
-
 .grid {
   flex: 0 0 450px;
   width: 450px;
   height: 240px;
+  position: relative;
+  overflow: hidden;
 }
 
 .grid img {
@@ -357,6 +358,72 @@ body {
 .dot.active {
   background: var(--secundary-color);
 }
+.grid .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* fundo escuro semi-transparente */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+    font-size: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+}
+.info span{
+    margin-top: .5em;
+    color: var(--secundary-color);
+    font-size: 1.15em;
+}
+.info p{
+    width: 80%;
+    line-height: 1.5;
+    font-size: 0.6em;
+}
+
+.link-projeto a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    background-image: url(/assets/img/background-cv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 190px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 0.8em;
+}
+.grid:hover .info {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.grid .info a:hover {
+    background-image: url(/assets/img/background-cv-hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.4s ease; 
+}
+.info.breve {
+  font-size: 3em;
+  gap: 2em;
+  display: flex;        /* importante para o gap funcionar */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info.breve span{
+    font-size: 2em;
+}
+
+
 /*page skills*/
 #skills .overlay {
     position: absolute;
