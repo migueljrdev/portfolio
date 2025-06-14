@@ -4,7 +4,6 @@
     --primary-color: #1a18187a;
     --secundary-color: #FFC900;
     --font-primary: 'Press Start 2P', sans-serif;
-    --default-gap: 1rem;
 }
 
 *{
@@ -23,7 +22,7 @@ body {
     font-family: var(--font-primary);
     color: white;
     overflow: hidden;
-    position: relative; /* Ou remova completamente se não precisar */
+    position: relative;
 }
 #main-content {
     height: 100vh;
@@ -60,8 +59,8 @@ body {
     background-image: url(/assets/img/pagina1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(0.5) blur(3px) saturate(120%); /* Aqui você ajusta o filtro desejado */
-    z-index: -1; /* Deixa atrás do conteúdo */
+    filter: brightness(0.5) blur(3px) saturate(120%);
+    z-index: -1;
     transition: background-image 0.2s linear;
 }
 
@@ -98,8 +97,8 @@ body {
 }
 
 .top_header_nav ul {
-    display: flex;             /* Flexbox ativo */
-    gap: 2rem;                 /* Espaço entre os itens */
+    display: flex;
+    gap: 2rem;
     list-style: none;
     margin-right: 5em;
     padding: 0;
@@ -148,18 +147,29 @@ body {
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 2em;
 }
 
 .conteiner {
     display: flex;
-    align-items: center;      /* centraliza verticalmente */
-    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;
+    justify-content: center; 
     min-width: 100vw;
     height: 100%;
     scroll-snap-align: start;
 }
-
+.sobre-mim-all-elements{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+    gap: 2em;
+}
+.sobre-mim-box{
+    display: flex;
+    gap: 8em;
+}
+.title-sobremim{
+    text-align: center;
+}
 #sobre-mim, #projetos, #contato, #skills, #home {
     position: relative;
     display: flex;
@@ -167,9 +177,8 @@ body {
     height: 547px;
     padding: 3rem;
     gap: 2rem;
-    overflow: hidden; /* garante que o overlay não ultrapasse */
+    overflow: hidden;
 }
-
 #sobre-mim .overlay {
     position: absolute;
     top: 0;
@@ -179,26 +188,25 @@ body {
     background-image: url(/assets/img/background-text.png);
     background-size: cover;
     background-position: center;
-    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    opacity: 0.8;
     z-index: 0;
 }
 
 #sobre-mim > *:not(.overlay) {
     position: relative;
-    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+    z-index: 1;
 }
 
 #sobre-mim p {
-    font-size: 1.6rem;
+    font-size: 1.56rem;
     max-width: 500px;
     line-height: 1.5;
-    margin-top: 4em;
+    margin-top: 1.5em;
 }
 .text-sobre{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-right: 5em;
 }
 
 .h1-sobre-mim, .h1-projetos {
@@ -206,16 +214,16 @@ body {
     text-transform: uppercase;
     margin-top: 0.5em;
     display: flex;
-    align-items: center; /* Alinha verticalmente ao centro */
-    gap: 1rem; /* Espaçamento entre a imagem e o texto, opcional */
+    align-items: center;
+    gap: 1rem;
     justify-content: center;
     color: var(--secundary-color);
 }
 
 .btn-sobreMim{
     display: flex;
-    margin: auto;
-    gap: 2rem;
+    margin: 2em auto;
+    gap: 3rem;
     font-size: 2em;
 }
 
@@ -293,7 +301,7 @@ body {
 }
 .slider-container {
   position: relative;
-  width: 940px; /* 2 cards de 450px + gap */
+  width: 940px;
   overflow: hidden;
   margin: auto;
 }
@@ -364,7 +372,7 @@ body {
     left: 0;
     right: 0;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -375,7 +383,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2em;
+    gap: 1em;
 }
 .info span{
     margin-top: .5em;
@@ -413,14 +421,20 @@ body {
 }
 .info.breve {
   font-size: 3em;
-  gap: 2em;
-  display: flex;        /* importante para o gap funcionar */
+  gap: 1em;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .info.breve span{
     font-size: 2em;
+}
+.tecnologias {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4em;
 }
 
 
@@ -434,13 +448,13 @@ body {
     background-image: url(/assets/img/background-text.png);
     background-size: cover;
     background-position: center;
-    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    opacity: 0.8;
     z-index: 0;
 }
 
 #skills > *:not(.overlay) {
     position: relative;
-    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+    z-index: 1;
 }
 
 /*page contato*/
@@ -453,13 +467,13 @@ body {
     background-image: url(/assets/img/background-text.png);
     background-size: cover;
     background-position: center;
-    opacity: 0.8; /* aqui controla a opacidade da imagem */
+    opacity: 0.8;
     z-index: 0;
 }
 
 #contato > *:not(.overlay) {
     position: relative;
-    z-index: 1; /* faz com que o conteúdo apareça acima da imagem */
+    z-index: 1;
 }
 /*page home*/
 #home .overlay {
