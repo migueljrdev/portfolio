@@ -171,4 +171,3 @@ function updateDots() {
 
 // Inicializa o dot ao carregar
 updateDots();
-
