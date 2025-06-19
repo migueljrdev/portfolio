@@ -39,7 +39,7 @@ imgAvatar.addEventListener('mouseover', () => {
 });
 //retorna para img original ao sair do hover
 imgAvatar.addEventListener('mouseout', () => {
-  imgAvatar.src = "assets/img/Avatar.png";
+  imgAvatar.src = "assets/img/Avatar.webp";
 });
 
 
@@ -112,19 +112,19 @@ function updateBackgroundOverlay(sectionId) {
 
     switch (sectionId) {
         case 'home':
-            overlay.style.backgroundImage = "url('/assets/img/pagina3.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina3.webp')";
             break;
         case 'sobre-mim':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
             break;
         case 'projetos':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
             break;
         case 'skills':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
             break;
         case 'contato':
-            overlay.style.backgroundImage = "url('/assets/img/pagina3.png')";
+            overlay.style.backgroundImage = "url('/assets/img/pagina3.webp')";
             break;
         default:
             overlay.style.backgroundImage = "none";
@@ -134,22 +134,45 @@ function updateBackgroundOverlay(sectionId) {
 const slider = document.getElementById('slider');
 let currentIndex = 0;
 const cardsPerView = 2; // Mostrando 2 cards por vez
+const totalItems = slider.children.length;
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
 
+function updateArrowStates() {
+  // Controle do botão da esquerda
+  if (currentIndex === 0) {
+    leftArrow.style.opacity = "0";
+    leftArrow.style.pointerEvents = "none";
+  } else {
+    leftArrow.style.opacity = "1";
+    leftArrow.style.pointerEvents = "auto";
+  }
+
+  // Controle do botão da direita
+  if (currentIndex >= totalItems - cardsPerView) {
+    rightArrow.style.opacity = "0";
+    rightArrow.style.pointerEvents = "none";
+  } else {
+    rightArrow.style.opacity = "1";
+    rightArrow.style.pointerEvents = "auto";
+  }
+}
 function slideLeft() {
   if (currentIndex > 0) {
     currentIndex--;
     updateSlider();
     updateDots();
   }
+  updateArrowStates();
 }
 
 function slideRight() {
-  const totalItems = slider.children.length;
   if (currentIndex < totalItems - cardsPerView) {
     currentIndex++;
     updateSlider();
     updateDots();
   }
+  updateArrowStates();
 }
 
 function updateSlider() {
@@ -171,3 +194,4 @@ function updateDots() {
 
 // Inicializa o dot ao carregar
 updateDots();
+updateArrowStates();
