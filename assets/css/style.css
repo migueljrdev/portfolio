@@ -65,7 +65,7 @@ body {
     background-repeat: no-repeat;
     filter: brightness(0.5) blur(3px) saturate(120%);
     z-index: -1;
-    transition: background-image 0.2s linear;
+    transition: background-image 0.2s ease-in-out;
 }
 
 .maxWidth {
@@ -701,4 +701,26 @@ body {
 
 #home h2 {
     font-size: 4rem;
+}
+
+/* #scrollContainer {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+#scrollContainer::-webkit-scrollbar {
+  display: none; 
+} */
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 1.4em;
+  z-index: 1000;
+  font-size: 1.6em;
 }

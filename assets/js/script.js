@@ -106,30 +106,30 @@ scrollContainer.addEventListener("scroll", () => {
 });
 
 
-//mudar o background de acordo com a section
-function updateBackgroundOverlay(sectionId) {
-    const overlay = document.querySelector('.background-overlay');
+// //mudar o background de acordo com a section
+// function updateBackgroundOverlay(sectionId) {
+//     const overlay = document.querySelector('.background-overlay');
 
-    switch (sectionId) {
-        case 'home':
-            overlay.style.backgroundImage = "url('/assets/img/pagina3.webp')";
-            break;
-        case 'sobre-mim':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
-            break;
-        case 'projetos':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
-            break;
-        case 'skills':
-            overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
-            break;
-        case 'contato':
-            overlay.style.backgroundImage = "url('/assets/img/pagina3.webp')";
-            break;
-        default:
-            overlay.style.backgroundImage = "none";
-    }
-}
+//     switch (sectionId) {
+//         case 'home':
+//             overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
+//             break;
+//         case 'sobre-mim':
+//             overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
+//             break;
+//         case 'projetos':
+//             overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
+//             break;
+//         case 'skills':
+//             overlay.style.backgroundImage = "url('/assets/img/pagina1.webp')";
+//             break;
+//         case 'contato':
+//             overlay.style.backgroundImage = "url('/assets/img/pagina3.webp')";
+//             break;
+//         default:
+//             overlay.style.backgroundImage = "none";
+//     }
+// }
 
 const slider = document.getElementById('slider');
 let currentIndex = 0;
