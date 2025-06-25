@@ -1,8 +1,90 @@
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    .background-overlay {
+        background-image: url(/assets/img/pagina1-mobile.png);
+    }
 
-}
+    /*page home*/
 
+    #home h1 {
+        font-size: 2.6rem;
+    }
 
-@media (min-width: 769px) and (max-width: 1024px){
-    
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    /**/
+    .home-mobile {
+        height: 100%;
+        width: 100%;
+    }
+
+    .home-mobile-links {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: blueviolet;
+    }
+
+    .top_header {
+        display: none;
+    }
+
+    .top_header_logo {
+        width: 300px;
+        height: 51px;
+        margin: auto;
+        background-image: url(/assets/img/background-logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .top_header_logo h1 {
+        color: black;
+        line-height: 51px;
+        text-align: center;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-shadow: 2px 1px 0px white;
+    }
+
+    .top_header_nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+        margin-right: 5em;
+        padding: 0;
+    }
+
+    .top_header_nav {
+        margin: auto;
+    }
+
+    .top_header_nav a {
+        display: inline-block;
+        width: 184px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+        background-image: url(/assets/img/background-link-nav.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: rgb(0, 0, 0);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .top_header_nav a:hover {
+        background-image: url(/assets/img/background-link-nav-hover.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: var(--secundary-color);
+        text-shadow: 1px 2px 0px black;
+        transform: translateY(-4px);
+        transition: 0.1s linear;
+    }
 }

@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     const startScreen = document.getElementById('start-screen');
     const mainContent = document.getElementById('main-content');
+    const footer = document.querySelector('footer');
 
     if (startScreen) {
       // Aplica transição de saída
@@ -11,8 +12,9 @@ window.addEventListener('load', () => {
       setTimeout(() => {
         startScreen.remove();
 
-        if (mainContent) {
+        if (window.innerWidth > 769) {
           mainContent.style.display = 'block';
+          footer.style.display = 'block';
 
           // Scroll para sobre-mim com delay
           setTimeout(() => {
@@ -20,6 +22,18 @@ window.addEventListener('load', () => {
             if (sobreMim) {
               sobreMim.scrollIntoView({ behavior: "smooth" });
               setActiveLink("sobre-mim");
+            }
+          }, 100);
+        }
+        if (window.innerWidth <= 768) {
+          mainContent.style.display = 'block';
+          footer.style.display = 'block';
+          // Scroll para home-mobile com delay
+          setTimeout(() => {
+            const sobreMim = document.getElementById("home-mobile");
+            if (sobreMim) {
+              sobreMim.scrollIntoView({ behavior: "smooth" });
+              setActiveLink("home-mobile");
             }
           }, 100);
         }
@@ -195,3 +209,5 @@ function updateDots() {
 // Inicializa o dot ao carregar
 updateDots();
 updateArrowStates();
+
+//mobile

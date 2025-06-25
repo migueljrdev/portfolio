@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-
+    
     <main id="main-content" style="display: none;">
         <header class="top_header maxWidth">
             <div class="top_header_logo">
@@ -40,6 +40,23 @@
 
         <div class="section-container" id="scrollContainer">
             <section class="conteiner">
+                <div id="home-mobile">
+                    <div class="home-mobile-links">
+                        <div class="top_header_logo">
+                            <h1>&lt;Miguel Jr/&gt;</h1>
+                        </div>
+                        <nav class="top_header_nav">
+                            <ul>
+                                <li><a class="li-nav" onclick="scrollToSection('sobre-mim')" href="#sobre-mim">Sobre mim</a></li>
+                                <li><a class="li-nav" onclick="scrollToSection('projetos')" href="#projetos">Projetos</a></li>
+                                <li><a class="li-nav" onclick="scrollToSection('skills')" href="#skills">skills</a></li>
+                                <li><a class="li-nav" onclick="scrollToSection('contato')" href="#contato">Contato</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                </section>
+                <section class="conteiner">
                 <div id="sobre-mim">
                     <div class="overlay"></div>
                     <div class="sobre-mim-all-elements">
@@ -82,7 +99,7 @@
             </section>
 
             <section class="conteiner">
-                <div id="projetos">
+                <div id="projetos" class="pagina">
                     <div class="overlay"></div>
                     <div class="elementos-projeto">
                         <div class="title-projetos">
@@ -151,7 +168,7 @@
             </section>
 
             <section class="conteiner">
-                <div id="skills">
+                <div id="skills" class="pagina">
                     <div class="overlay"></div>
                     <div class="tex-skill">
                         <div class="title-skill">
@@ -187,7 +204,7 @@
             </section>
 
             <section class="conteiner">
-                <div id="contato">
+                <div id="contato" class="pagina">
                     <div class="overlay"></div>
                     <div class="text-contato">
                         <div class="title-contato">
@@ -212,7 +229,7 @@
             </section>
         </div>
     </main>
-    <footer>Desenvolvido por &lt;Miguel Jr/&gt;</footer>
+    <footer style="display: none;">Desenvolvido por &lt;Miguel Jr/&gt;</footer>
 
     <script src="assets/js/script.js"></script>
 </body>
