@@ -112,11 +112,6 @@ scrollContainer.addEventListener("scroll", () => {
             currentId = section.id;
         }
     });
-
-    if (currentId) {
-        setActiveLink(currentId);
-        updateBackgroundOverlay(currentId);
-    }
 });
 
 
@@ -211,3 +206,28 @@ updateDots();
 updateArrowStates();
 
 //mobile
+// Função para marcar hover ativo da section mobile
+// Função para scroll suave e destaque
+function scrollToSectionMobile(id) {
+    const sectionMobile = document.getElementById(id);
+    if (sectionMobile) {
+        sectionMobile.scrollIntoView({ behavior: 'smooth' });
+        setActiveLinkMobile(id);
+    }
+}
+function setActiveLinkMobile(id) {
+    // Remove a classe ativa de todas as setas
+    const allSetas = document.querySelectorAll('.img-seta-mobile');
+    allSetas.forEach(seta => seta.classList.remove('img-seta-active-mobile'));
+
+    // Seleciona o <a> correto e aplica a classe na <img> irmã
+    const links = document.querySelectorAll('.top_nav-mobile ul li a');
+    links.forEach(link => {
+        if (link.getAttribute('href') === `#${id}`) {
+            const seta = link.previousElementSibling;
+            if (seta && seta.classList.contains('img-seta-mobile')) {
+                seta.classList.add('img-seta-active-mobile');
+            }
+        }
+    });
+}
