@@ -53,7 +53,9 @@ body {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-
+.navegacao{
+    display: none;
+}
 .background-overlay {
     position: fixed;
     top: 0;

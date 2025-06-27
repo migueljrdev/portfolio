@@ -19,14 +19,7 @@ window.addEventListener('load', () => {
         if (window.innerWidth <= 768) {
           mainContent.style.display = 'block';
           footer.style.display = 'block';
-          // Scroll para home-mobile com delay
-          setTimeout(() => {
-            const sobreMim = document.getElementById("home-mobile");
-            if (sobreMim) {
-              sobreMim.scrollIntoView({ behavior: "smooth" });
-              setActiveLink("home-mobile");
-            }
-          }, 100);
+
         }
 
       }, 300); // corresponde ao tempo da animação (1s)
@@ -201,14 +194,20 @@ updateArrowStates();
 
 //mobile
 // Função para marcar hover ativo da section mobile
-// Função para scroll suave e destaque
 function scrollToSectionMobile(id) {
     const sectionMobile = document.getElementById(id);
-    if (sectionMobile) {
-        sectionMobile.scrollIntoView({ behavior: 'smooth' });
-        setActiveLinkMobile(id);
-    }
+    const headerOffset = 80; // Altura da .top_logo-mobile
+    const elementPosition = sectionMobile.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+
+    setActiveLinkMobile(id);
 }
+
 function setActiveLinkMobile(id) {
     // Remove a classe ativa de todas as setas
     const allSetas = document.querySelectorAll('.img-seta-mobile');

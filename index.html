@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Portfolio</title>
     <link rel="icon" href="assets/img/seta.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -41,13 +41,13 @@
         <div class="section-container" id="scrollContainer">
             <section class="conteiner section-conteiner-mobile">
                 <div id="home-mobile">
-                    <div class="top_logo-mobile">
+                    <div class="top_logo-mobile" id="logo-mobile">
                         <h1>&lt;Miguel Jr/&gt;</h1>
                     </div>
                     <div class="home-mobile-links">
                         <nav class="top_nav-mobile">
                             <ul>
-                                <li><img class="img-seta-mobile img-seta-active-mobile" src="assets/img/seta.png" alt="seta"><a class="li-nav-mobile" onclick="scrollToSectionMobile('sobre-mim')" href="#sobre-mim">Sobre mim</a></li>
+                                <li><img class="img-seta-mobile img-seta-active-mobile" src="assets/img/seta.png" alt="seta"><a class="li-nav-mobile" onclick="scrollToSectionMobile('sobre-mim-size')" href="#sobre-mim-size">Sobre mim</a></li>
                                 <li><img class="img-seta-mobile" src="assets/img/seta.png" alt="seta"><a class="li-nav-mobile" onclick="scrollToSectionMobile('projetos')" href="#projetos">Projetos</a></li>
                                 <li><img class="img-seta-mobile" src="assets/img/seta.png" alt="seta"><a class="li-nav-mobile" onclick="scrollToSectionMobile('skills')" href="#skills">skills</a></li>
                                 <li><img class="img-seta-mobile" src="assets/img/seta.png" alt="seta"><a class="li-nav-mobile" onclick="scrollToSectionMobile('contato')" href="#contato">Contato</a></li>
@@ -56,7 +56,11 @@
                     </div>
                 </div>
                 </section>
-                <section class="conteiner">
+            <section class="conteiner" id="sobre-mim-size">
+                <div class="navegacao">
+                    <button onclick="irPara('home-mobile')">← Voltar</button>
+                    <button onclick="irPara('projetos')">Avançar →</button>
+                </div>
                 <div id="sobre-mim">
                     <div class="overlay"></div>
                     <div class="sobre-mim-all-elements">
