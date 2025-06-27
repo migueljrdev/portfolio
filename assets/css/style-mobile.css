@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+
+    body{
+        padding-top: 20px;
+    }
     .background-overlay {
         background-image: url(/assets/img/pagina1-mobile.png);
     }
@@ -25,8 +29,8 @@
     }
 
     .home-mobile {
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
     }
 
     .home-mobile-links {
@@ -43,7 +47,7 @@
 
     .top_logo-mobile {
         position: absolute;
-        top: 10px;
+        top: 0;
         left: 0;
         right: 0;
         width: 380px;
@@ -126,5 +130,152 @@
         margin: auto;
         justify-content: center;
         align-items: center;
+    }
+    /*page sobre mim*/
+    
+    .img-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .conteiner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
+        height: 100%;
+        scroll-snap-align: start;
+    }
+    
+    .sobre-mim-all-elements {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 1em;
+    }
+    
+    .sobre-mim-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+    
+    .title-sobremim {
+        text-align: center;
+    }
+    
+    #sobre-mim, #projetos, #contato, #skills, #home {
+        position: relative;
+        display: flex;
+        margin-top: 5rem;
+        width: 100%;
+        height: 650px;
+        padding: 3rem;
+        gap: 2rem;
+        overflow: hidden;
+    }
+    
+    #sobre-mim .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/img/background-text-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.8;
+        z-index: 0;
+    }
+    
+    #sobre-mim>*:not(.overlay) {
+        position: relative;
+        z-index: 1;
+    }
+    
+    #sobre-mim p {
+        font-size: 1.1rem;
+        max-width: 340px;
+        line-height: 1.5;
+        margin-top: 1.5em;
+    }
+    
+    .text-sobre {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-sobre p strong {
+        color: #fde796;
+    }
+    
+    .h1-sobre-mim, .h1-projetos, .h1-skills, .h1-contato {
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        margin-top: 0.5em;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        color: var(--secundary-color);
+    }
+    
+    .btn-sobreMim {
+        display: flex;
+        margin: 2em auto;
+        gap: 1rem;
+        font-size: 2em;
+    }
+    
+    .cv-linkedin-ico a {
+        display: flex;
+        text-decoration: none;
+        width: 184px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+        background-image: url(/assets/img/background-cv.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8em;
+    }
+    
+    .cv-linkedin-ico a:hover {
+        background-image: url(/assets/img/background-cv-hover.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+        text-shadow: 1px 1px 0px var(--secundary-color);
+        transform: translateY(-2px);
+        transition: 0.1s linear;
+    }
+    .img-sobre{
+        width: 22px;
+        height: 22px;
+    }
+    
+    .avatar {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 1rem;
+    }
+    
+    .avatar h3 {
+        text-align: center;
+        font-size: 1em;
+        color: var(--secundary-color);
+        text-shadow: 1px 1px 1px var(--primary-color);
+        opacity: 0.4;
+        text-transform: uppercase;
     }
 }

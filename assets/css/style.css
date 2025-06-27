@@ -712,7 +712,9 @@ body {
   display: none; 
 } */
 
-
+.section-conteiner-mobile{
+    display: none;
+}
 footer{
   position: fixed;
   bottom: 0;

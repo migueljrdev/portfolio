@@ -15,15 +15,6 @@ window.addEventListener('load', () => {
         if (window.innerWidth > 769) {
           mainContent.style.display = 'block';
           footer.style.display = 'block';
-
-          // Scroll para sobre-mim com delay
-          setTimeout(() => {
-            const sobreMim = document.getElementById("sobre-mim");
-            if (sobreMim) {
-              sobreMim.scrollIntoView({ behavior: "smooth" });
-              setActiveLink("sobre-mim");
-            }
-          }, 100);
         }
         if (window.innerWidth <= 768) {
           mainContent.style.display = 'block';
@@ -71,10 +62,10 @@ scrollContainer.addEventListener('wheel', (e) => {
   }
 }, { passive: false });
 
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  section.scrollIntoView({ behavior: 'smooth', inline: 'start' });
-}
+// function scrollToSection(id) {
+//   const section = document.getElementById(id);
+//   section.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+// }
 
 // Função para scroll suave e destaque
 function scrollToSection(id) {
@@ -98,7 +89,6 @@ function setActiveLink(id) {
 
 // Detecta rolagem e marca o link correto
 scrollContainer.addEventListener("scroll", () => {
-    console.log("scroll ativado");
 
     const sectionDivs = scrollContainer.querySelectorAll(".conteiner > div[id]");
     const scrollPos = scrollContainer.scrollLeft + scrollContainer.clientWidth / 2;
@@ -112,6 +102,10 @@ scrollContainer.addEventListener("scroll", () => {
             currentId = section.id;
         }
     });
+    //importante para marcar o link correto
+    if (currentId) {
+        setActiveLink(currentId);
+    }
 });
 
 
