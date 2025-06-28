@@ -224,3 +224,12 @@ function setActiveLinkMobile(id) {
         }
     });
 }
+function irPara(id) {
+  const destino = document.getElementById(id);
+  if (destino) {
+    destino.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
