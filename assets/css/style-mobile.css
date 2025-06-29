@@ -320,29 +320,31 @@
 
     .elementos-projeto {
         max-height: 100%;
-        overflow-y: auto;
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .slider-container {
-        width: 100%;
-        overflow: visible;
+        width: 90%;
+        max-height: 75%;
+        overflow-y: auto;
+        margin-top: 1em;
     }
 
     .slider-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap:4rem;
     }
 
     .grid {
         width: 100%;
         max-width: 320px;
-        margin: 0 auto;
+        max-height: 140px;
         flex: none;
+        background-color: #fde796;
     }
 
     .arrow,
@@ -355,12 +357,75 @@
         height: auto;
     }
 
+    .grid .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.4s ease;
+        font-size: 2.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
     .info {
-        position: static;
-        opacity: 1 !important;
-        transform: none !important;
-        padding: 1rem;
-        font-size: 1.2rem;
+        padding: .5rem;
+        font-size: 0.2rem;
+    }
+
+    .info span {
+        margin-top: .2em;
+        color: var(--secundary-color);
+        font-size: 0.5em;
+    }
+
+    .info p {
+        width: 100%;
+        line-height: 1.4;
+        font-size: 0.4em;
+    }
+
+    .link-projeto {
+        gap: 1em;
+    }
+
+    .link-projeto a {
+        width: 100px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 0.4em;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .img-link-projeto {
+        width: 14px;
+        height: 14px;
+    }
+
+    .info.breve {
+        font-size: 2em;
+    }
+
+    .info.breve span {
+        font-size: 1.5em;
+    }
+
+    .tecnologias {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1em;
     }
 
     /*fim page projetos*/
