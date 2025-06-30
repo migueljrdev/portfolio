@@ -154,13 +154,13 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        gap: 1em;
+        gap: 2.4em;
     }
 
     .sobre-mim-box {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 0em;
     }
 
     .title-sobremim {
@@ -270,7 +270,7 @@
     }
 
     .avatar h3 {
-        display: none;
+        font-size: .8em;
     }
 
     /*botoes de navegaçao para secoes*/
@@ -321,14 +321,15 @@
     .elementos-projeto {
         max-height: 100%;
         padding: 1rem;
+        padding-top: 0;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0rem;
     }
 
     .slider-container {
         width: 90%;
-        max-height: 75%;
+        max-height: 72%;
         overflow-y: auto;
         margin-top: 1em;
     }
@@ -336,7 +337,7 @@
     .slider-wrapper {
         display: flex;
         flex-direction: column;
-        gap:4rem;
+        gap: 4rem;
     }
 
     .grid {
@@ -344,7 +345,6 @@
         max-width: 320px;
         max-height: 140px;
         flex: none;
-        background-color: #fde796;
     }
 
     .arrow,
@@ -357,6 +357,14 @@
         height: auto;
     }
 
+    .h3-mobile-tex-clique-card{
+        display: inline-block;
+        margin-top: 2.4em;
+        font-size: 1.2em;
+        opacity: .6;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
     .grid .info {
         position: absolute;
         bottom: 0;
@@ -374,7 +382,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     .info {
@@ -429,6 +436,88 @@
     }
 
     /*fim page projetos*/
+
+    /*page skill*/
+
+    .tex-skill {
+        gap: 2.4em;
+    }
+
+    .skills-ico {
+        gap: 5em;
+    }
+
+    .principal-skill, .basic-skill {
+        width: 75%;
+        gap: 4em;
+        padding: 2em;
+        border: 2px solid var(--secundary-color);
+        box-shadow: rgba(224, 185, 41, 0.4) -2px 2px, rgba(255, 201, 0, 0.3) -5px 5px, rgba(255, 201, 0, 0.2) -10px 10px, rgba(255, 201, 0, 0.1) -15px 15px, rgba(255, 205, 26, 0.05) -20px 20px;
+    }
+
+    .title-ico-skill h1 {
+        font-size: 1.8em;
+        text-shadow: 1px 1px 0px var(--secundary-color);
+    }
+
+    .icons {
+        justify-content: space-around;
+        gap: 8em;
+    }
+
+    .icons i {
+        font-size: 7em;
+    }
+
+    .h2-ico {
+        font-size: .6rem;
+        margin-top: 0.5em;
+    }
+    /*fim page skill*/
+
+    /*page contato*/
+
+    .text-contato {
+        gap: 3em;
+    }
+
+    .div-contato {
+        width: 70%;
+    }
+
+    .ul-contato {
+        gap: 4em;
+    }
+
+    .li-contato {
+        border-top: 4px solid #ffffff;
+        border-left: 4px solid #ffffff;
+        border-bottom: 4px solid #967706d8;
+        border-right: 4px solid #967706d8;
+        outline: 4px solid black;
+
+    }
+
+    .li-contato a {
+        font-size: 2.4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .li-contato:hover {
+        border-top: 4px solid #ffffff;
+        border-left: 4px solid #ffffff;
+        border-bottom: 4px solid #595959;
+        border-right: 4px solid #595959;
+        transform: translateY(-2px);
+    }
+
+    .img-ico-contato {
+        width: 46px;
+        height: 46px;
+    }
+
+    /*fim page contato*/
     footer {
         padding: 10px;
         margin-bottom: 0.3em;

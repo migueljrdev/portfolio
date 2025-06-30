@@ -39,6 +39,12 @@ imgAvatar.addEventListener('mouseover', () => {
 imgAvatar.addEventListener('mouseout', () => {
   imgAvatar.src = "assets/img/Avatar.webp";
 });
+//muda o texto descritivo do avatar no mobile
+const avatarh3mobile = document.querySelector('.avatar h3');
+if (window.innerWidth <= 768){
+  avatarh3mobile.innerHTML = 'clique na foto';
+}
+
 
 
 const scrollContainer = document.getElementById('scrollContainer');

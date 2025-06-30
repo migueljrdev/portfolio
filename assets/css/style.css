@@ -340,7 +340,9 @@ body {
 .title-projetos {
     text-align: center;
 }
-
+.h3-mobile-tex-clique-card{
+    display: none;
+}
 .slider-container {
     position: relative;
     width: 940px;
