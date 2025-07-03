@@ -340,9 +340,11 @@ body {
 .title-projetos {
     text-align: center;
 }
-.h3-mobile-tex-clique-card{
+
+.h3-mobile-tex-clique-card {
     display: none;
 }
+
 .slider-container {
     position: relative;
     width: 940px;
@@ -724,6 +726,46 @@ body {
 
 .section-conteiner-mobile {
     display: none;
+}
+
+.idioma-selector {
+    display: flex;
+    gap: 1em;
+}
+
+.idioma-selector button {
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: .9rem;
+    display: flex;
+    gap: .3em;
+    align-items: center;
+    background-color: transparent;
+    background-color: var(--secundary-color);
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #967706d8;
+    border-right: 2px solid #967706d8;
+    outline: 2px solid black;
+    padding: .2em;
+}
+
+.idioma-selector button:hover {
+    background-color: #828282;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #595959;
+    border-right: 2px solid #595959;
+    transform: translateY(-1px);
+    color: var(--secundary-color);
+    text-shadow: 1px 2px 0px black;
+    transition: .1s linear;
+}
+
+.img-button-idioma {
+    width: 20px;
+    height: 15px;
+    border: 1px solid black;
 }
 
 footer {

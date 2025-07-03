@@ -36,6 +36,11 @@
                     <li><a class="li-nav" onclick="scrollToSection('contato')" href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <div class="idioma-selector">
+                <button onclick="traduzir('pt')"><img class="img-button-idioma" src="assets/img/ptbr.jpg" alt="idioma-ptbr"> BR</button>
+                <button onclick="traduzir('en')"><img class="img-button-idioma" src="assets/img/us.png" alt="idioma-us" srcset=""> US</button>
+            </div>
+
         </header>
 
         <div class="section-container" id="scrollContainer">
@@ -249,6 +254,7 @@
     <footer>Desenvolvido por &lt;Miguel Jr/&gt;</footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>
