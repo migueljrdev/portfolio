@@ -733,6 +733,10 @@ body {
     gap: 1em;
 }
 
+.idioma-selector a {
+    text-decoration: none;
+}
+
 .idioma-selector button {
     cursor: pointer;
     font-family: var(--font-primary);
@@ -760,6 +764,17 @@ body {
     color: var(--secundary-color);
     text-shadow: 1px 2px 0px black;
     transition: .1s linear;
+}
+
+.idioma-selector a.ativo button {
+    background-color: #828282;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #595959;
+    border-right: 2px solid #595959;
+    transform: translateY(-1px);
+    color: var(--secundary-color);
+    text-shadow: 1px 2px 0px black;
 }
 
 .img-button-idioma {

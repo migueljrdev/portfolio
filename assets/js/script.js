@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 
         }
 
-      }, 300); // corresponde ao tempo da animação (1s)
+      }, 300); // corresponde ao tempo da animação
     }
 
   }, 2200);
@@ -239,19 +239,3 @@ function irPara(id) {
     });
   }
 }
-
-//translate
-function traduzir(lang) {
-  localStorage.setItem('idioma', lang);
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const texto = textos[lang][key];
-    if (texto) {
-      el.innerHTML = texto;
-    }
-  });
-}
-
-//translate carregar idioma salvo em local
-const idiomaSalvo = localStorage.getItem('idioma') || 'pt';
-traduzir(idiomaSalvo);
