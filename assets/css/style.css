@@ -64,7 +64,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/pagina1.webp);
+    background-image: url(../img/pagina1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     filter: brightness(0.5) blur(3px) saturate(120%);
@@ -92,7 +92,7 @@ body {
     width: 300px;
     height: 51px;
     margin: auto;
-    background-image: url(/assets/img/background-logo.png);
+    background-image: url(../img/background-logo.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -125,7 +125,7 @@ body {
     line-height: 40px;
     text-align: center;
     text-decoration: none;
-    background-image: url(/assets/img/background-link-nav.png);
+    background-image: url(../img/background-link-nav.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(0, 0, 0);
@@ -134,7 +134,7 @@ body {
 }
 
 .top_header_nav a:hover {
-    background-image: url(/assets/img/background-link-nav-hover.png);
+    background-image: url(../img/background-link-nav-hover.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--secundary-color);
@@ -144,7 +144,7 @@ body {
 }
 
 .li-nav.active {
-    background-image: url(/assets/img/background-link-nav-hover.png);
+    background-image: url(../img/background-link-nav-hover.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--secundary-color);
@@ -204,7 +204,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/background-text.png);
+    background-image: url(../img/background-text.png);
     background-size: cover;
     background-position: center;
     opacity: 0.8;
@@ -259,7 +259,7 @@ body {
     line-height: 40px;
     text-align: center;
     text-decoration: none;
-    background-image: url(/assets/img/background-cv.png);
+    background-image: url(../img/background-cv.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
@@ -270,7 +270,7 @@ body {
 }
 
 .cv-linkedin-ico a:hover {
-    background-image: url(/assets/img/background-cv-hover.png);
+    background-image: url(../img/background-cv-hover.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
@@ -319,7 +319,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/background-text.png);
+    background-image: url(../img/background-text.png);
     background-size: cover;
     background-position: center;
     opacity: 0.8;
@@ -458,7 +458,7 @@ body {
     color: black;
     text-decoration: none;
     display: flex;
-    background-image: url(/assets/img/background-cv.png);
+    background-image: url(../img/background-cv.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 190px;
@@ -481,7 +481,7 @@ body {
 }
 
 .link-projeto-div a:hover {
-    background-image: url(/assets/img/background-cv-hover.png);
+    background-image: url(../img/background-cv-hover.png);
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateY(-2px);
@@ -516,7 +516,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/background-text.png);
+    background-image: url(../img/background-text.png);
     background-size: cover;
     background-position: center;
     opacity: 0.8;
@@ -596,7 +596,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/background-text.png);
+    background-image: url(../img/background-text.png);
     background-size: cover;
     background-position: center;
     opacity: 0.8;
