@@ -41,8 +41,9 @@ imgAvatar.addEventListener('mouseout', () => {
 });
 //muda o texto descritivo do avatar no mobile
 const avatarh3mobile = document.querySelector('.avatar h3');
-if (window.innerWidth <= 768){
-  avatarh3mobile.innerHTML = 'clique na foto';
+const isEnglish = window.location.pathname.includes('-en');
+if (window.innerWidth <= 768 && avatarh3mobile){
+  avatarh3mobile.innerHTML = isEnglish ? 'click the photo' : 'clique na foto';
 }
 
 
